@@ -43,6 +43,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+      }
+
+      a {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      a:hover {
+        text-decoration: none;
       }
 
       #bg {
@@ -127,11 +137,22 @@
       #skrimp-button {
         font-family: monospace;
       }
+
+      #credits {
+        position: absolute;
+        z-index: 1;
+        bottom: 0;
+        right: 0;
+        padding: 10px;
+        background-color: #0000001a;
+        font-family: monospace;
+        font-size: smaller;
+      }
     </style>
   </head>
 
   <body>
-    <div id="overlay"><a id="skrimp-button" href="#">click for skrimp</a></div>
+    <div id="overlay"><a id="skrimp-button">click for skrimp</a></div>
     <div id="bg"></div>
     <svg
       id="skrimp"
@@ -164,7 +185,7 @@
         style="fill: #302c30"
       />
     </svg>
-
+    <div id="credits">made with love and <a href="https://github.com/jkingsman/skrimp" target="_blank">open source</a> by jack kingsman</a> | <a href="https://github.com/jkingsman/skrimp/blob/main/LICENSE.md" target="_blank">credits</a></div>
     <script type="text/javascript">
       const musicPath = "/media/sexxy_bit_2!!.xm";
       let animationSpeed = [2, 1];
@@ -199,20 +220,18 @@
         }
       }
 
-      function moreAnimation() {
-        animationSpeed = [animationSpeed[0] * 0.9, animationSpeed[1] * 0.9];
-        document.getElementById(
-          "skrimp"
-        ).style.animationDuration = `${animationSpeed[0]}s, ${animationSpeed[1]}s`;
-      }
-
       document.getElementById("skrimp-button").addEventListener("click", () => {
         document.getElementById("overlay").style.display = "none";
         setInterval(playMusic, 500);
       });
 
       Array.from(document.querySelectorAll("#skrimp > path")).forEach((path) =>
-        path.addEventListener("click", moreAnimation)
+        path.addEventListener("click", () => {
+          animationSpeed = [animationSpeed[0] * 0.9, animationSpeed[1] * 0.9];
+          document.getElementById(
+            "skrimp"
+          ).style.animationDuration = `${animationSpeed[0]}s, ${animationSpeed[1]}s`;
+        })
       );
     </script>
     <script type="text/javascript" src="/lib/libopenmpt.js"></script>
