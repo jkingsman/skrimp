@@ -1,4 +1,7 @@
-# `skrimp`
+## `skrimp`
+
+
+# it lives at [skrimp.lol](https://skrimp.lol)
 
 skrimp rock. shromp are neat. shrimples are pals.
 
