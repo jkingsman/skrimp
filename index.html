@@ -13,7 +13,7 @@
     <meta property="og:url" content="https://skrimp.nexus" />
     <meta property="og:description" content="skrimp go swim swim swim" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/favicons/og.png" />
+    <meta property="og:image" content="./favicons/og.png" />
 
     <link
       rel="icon"
@@ -21,15 +21,15 @@
       href="/favicons/favicon-96x96.png"
       sizes="96x96"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/favicons/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/favicons/apple-touch-icon.png"
+      href="./favicons/apple-touch-icon.png"
     />
     <meta name="apple-mobile-web-app-title" content="skrimp" />
-    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
 
     <style>
       html {
@@ -63,7 +63,7 @@
           #dd00f3
         );
         background-size: 1800% 1800%;
-        animation: rainbow 18s ease infinite;
+        animation: rainbow 9s ease infinite;
       }
 
       @keyframes rainbow {
@@ -166,13 +166,13 @@
     </svg>
 
     <script type="text/javascript">
-      const musicPath = "/media/sexxy_bit_2!!.xm";
+      const musicPath = "./media/sexxy_bit_2!!.xm";
       let animationSpeed = [2, 1];
       let player;
       window["libopenmpt"] = {};
 
       libopenmpt.locateFile = function (filename) {
-        return "/lib/" + filename;
+        return "./lib/" + filename;
       };
 
       function afterLoad(path, buffer) {
@@ -215,7 +215,7 @@
         path.addEventListener("click", moreAnimation)
       );
     </script>
-    <script type="text/javascript" src="/lib/libopenmpt.js"></script>
-    <script type="text/javascript" src="/lib/chiptune2.js"></script>
+    <script type="text/javascript" src="./lib/libopenmpt.js"></script>
+    <script type="text/javascript" src="./lib/chiptune2.js"></script>
   </body>
 </html>
