@@ -21,9 +21,12 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-## Chiptune
+## Chiptunes
 
-[sexxy_bit_2!!.xm by Drozerix](https://modarchive.org/index.php?request=view_by_moduleid&query=174247), Public Domain
+[Sexy Bit 2!! by Drozerix](https://modarchive.org/index.php?request=view_by_moduleid&query=174247), Public Domain
+[getting_hit_by_a_car_in_a_lidl_parking_lot_like by Plan Beanie](https://modarchive.org/index.php?request=view_by_moduleid&query=197307), Public Domain
+[Key Generators by Drozerix](https://modarchive.org/index.php?request=view_by_moduleid&query=173939), Public Domain
+[my_neighbors_kid_is_an_internet_addict.xm by Plan Beanie](https://modarchive.org/index.php?request=view_by_moduleid&query=193978), Public Domain
 
 ## Shrimp SVG
 

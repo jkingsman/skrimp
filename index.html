@@ -229,6 +229,14 @@
   <script type="text/javascript">
     let animationSpeed = [2, 1];
     var xm;
+    const musicSelect = [
+      "mods/sexxy_bit_2!!.xm",
+      "mods/key_generators.xm",
+      "mods/getting_hit_by_a_car_in_a_lidl_parking_lot_like.xm",
+      "mods/my_neighbors_kid_is_an_internet_addict.xm",
+    ]
+
+    const searchParamTrackIndex = new URLSearchParams(document.location.search).get('track') || 0;
 
     document.getElementById("skrimp-button").addEventListener("click", () => {
       document.getElementById("overlay").style.display = "none";
@@ -238,7 +246,7 @@
       }
 
       xm = new XMModule(); // sample rate is 48000 by default
-      xm.load("/sexxy_bit_2!!.xm", function (err) {
+      xm.load(musicSelect[searchParamTrackIndex], function (err) {
         if (err) {
           console.error(err);
           return;
