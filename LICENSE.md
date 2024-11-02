@@ -34,4 +34,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [jslibxm by zeozeozeo](https://github.com/zeozeozeo/jslibxm), Public Domain
 
 ## Background of OG Image
-Radiant Gradient by [SVGBackgrounds.com](https://www.svgbackgrounds.com/)
+Radiant Gradient by [SVGBackgrounds.com](https://www.svgbackgrounds.com/), used with permission via attribution
