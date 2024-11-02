@@ -76,6 +76,18 @@
         animation: rainbow 9s ease infinite;
       }
 
+      .crazy-rainbow {animation:rainbowfill 1s infinite;}
+  @keyframes rainbowfill{
+    0%{fill:red}
+    14%{fill:orange}
+    28%{fill:yellow}
+    42%{fill:green}
+    56%{fill:blue}
+    70%{fill:indigo}
+    84%{fill:violet}
+    100%{fill:red}
+  }
+
       @keyframes rainbow {
         0% {
           background-position: 0% 82%;
@@ -226,9 +238,17 @@
         setInterval(playMusic, 500);
       });
 
+      let clickCount = 0;
       Array.from(document.querySelectorAll("#skrimp > path")).forEach((path) =>
         path.addEventListener("click", () => {
-          animationSpeed = [animationSpeed[0] * 0.9, animationSpeed[1] * 0.9];
+          clickCount += 1;
+          if (clickCount == 20) {
+            // evil! terrible! for each path, set a randomized timeout with an immediately invoked function! bad! use bind! too lazy to remember how bind works! evil!
+            Array.from(document.querySelectorAll('path')).forEach((path) => {(function(path){setTimeout(function() { path.classList.add('crazy-rainbow') }, Math.random() * 500);})(path);})
+          } else {
+            animationSpeed = [animationSpeed[0] * 0.9, animationSpeed[1] * 0.9];
+          }
+
           document.getElementById(
             "skrimp"
           ).style.animationDuration = `${animationSpeed[0]}s, ${animationSpeed[1]}s`;
