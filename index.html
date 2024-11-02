@@ -228,45 +228,24 @@
     jack kingsman</a> | <a href="https://github.com/jkingsman/skrimp/blob/main/LICENSE.md" target="_blank">credits</a>
   </div>
   <script type="text/javascript">
-    const musicPath = "/media/sexxy_bit_2!!.xm";
     let animationSpeed = [2, 1];
-    let player;
+    var xm;
 
-    // utilities to keep libopenmpt happy; IDK why I just do what chiptune2 tells me to
-    window["libopenmpt"] = {};
-    libopenmpt.locateFile = function (filename) {
-      return "/lib/" + filename;
-    };
-
-    // callback to hand to the player load function
-    function afterLoad(path, buffer) {
-      player.play(buffer);
-    }
-
-    function playMusic() {
-      // we call this on an interval to await file load, so if we're already rolling, bail out.
-      if (player) {
+    document.getElementById("skrimp-button").addEventListener("click", () => {
+      document.getElementById("overlay").style.display = "none";
+      if (xm) {
+        // be idempotent-ish
         return;
       }
 
-      if (player == undefined && typeof ChiptuneJsPlayer !== "undefined") {
-        player = new ChiptuneJsPlayer(new ChiptuneJsConfig(-1));
-
-        fetch(musicPath)
-          .then((response) => response.blob())
-          .then((blob) => {
-            const file = new File([blob], "sexxy_bit_2!!.xm", {
-              type: "application/octet-stream",
-            });
-            player.load(file, afterLoad.bind(this, musicPath));
-          });
-      }
-    }
-
-    document.getElementById("skrimp-button").addEventListener("click", () => {
-      // try repeatedly in case we're not loaded
-      document.getElementById("overlay").style.display = "none";
-      setInterval(playMusic, 500);
+      xm = new XMModule(); // sample rate is 48000 by default
+      xm.load("/sexxy_bit_2!!.xm", function (err) {
+        if (err) {
+          console.error(err);
+          return;
+        }
+        xm.resume();
+      });
     });
 
     let clickCount = 0;
@@ -290,8 +269,7 @@
       })
     );
   </script>
-  <script type="text/javascript" src="/lib/libopenmpt.js"></script>
-  <script type="text/javascript" src="/lib/chiptune2.js"></script>
+  <script type="text/javascript" src="/jslibxm.min.js"></script>
 </body>
 
 </html>
