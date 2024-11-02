@@ -154,6 +154,22 @@
       cursor: pointer;
     }
 
+    #skrimp,
+    #skrimp>path {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    #skrimp:focus,
+    #skrimp>path:focus {
+      outline: none !important;
+    }
+
     #overlay {
       position: absolute;
       z-index: 2;
