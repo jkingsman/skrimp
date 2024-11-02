@@ -53,15 +53,18 @@
       height: 100%;
       width: 100%;
       position: fixed;
-      background:
-        linear-gradient(rgba(255, 0, 0, 1) 0%, rgba(255, 154, 0, 1) 10%, rgba(208, 222, 33, 1) 20%, rgba(79, 220, 74, 1) 30%, rgba(63, 218, 216, 1) 40%, rgba(47, 201, 226, 1) 50%, rgba(28, 127, 238, 1) 60%, rgba(95, 21, 242, 1) 70%, rgba(186, 12, 248, 1) 80%, rgba(251, 7, 217, 1) 90%, rgba(255, 0, 0, 1) 100%) 0 0/100% 10000%;
-      animation: rainbowbg 5s linear infinite;
-    }
-
-    @keyframes rainbowbg {
-      to {
-        background-position: 0 -200%
-      }
+      background: linear-gradient(124deg,
+          #ff2400,
+          #e81d1d,
+          #e8b71d,
+          #e3e81d,
+          #1de840,
+          #1ddde8,
+          #2b1de8,
+          #dd00f3,
+          #dd00f3);
+      background-size: 1800% 1800%;
+      animation: rainbow 9s ease infinite;
     }
 
     .crazy-rainbow {
@@ -69,14 +72,51 @@
     }
 
     @keyframes rainbowfill {
-      0% {fill: red;}
-      14% {fill: orange;}
-      28% {fill: yellow;}
-      42% {fill: green;}
-      56% {fill: blue;}
-      70% {fill: indigo;}
-      84% {fill: violet;}
-      100% {fill: red;}
+      0% {
+        fill: red
+      }
+
+      14% {
+        fill: orange
+      }
+
+      28% {
+        fill: yellow
+      }
+
+      42% {
+        fill: green
+      }
+
+      56% {
+        fill: blue
+      }
+
+      70% {
+        fill: indigo
+      }
+
+      84% {
+        fill: violet
+      }
+
+      100% {
+        fill: red
+      }
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-position: 0% 82%;
+      }
+
+      50% {
+        background-position: 100% 19%;
+      }
+
+      100% {
+        background-position: 0% 82%;
+      }
     }
 
     @keyframes shimmy {
@@ -89,7 +129,7 @@
       }
     }
 
-    @keyframes throb {
+    @keyframes shine {
       from {
         transform: scale(1);
       }
@@ -103,7 +143,7 @@
       z-index: 1;
       width: 90vh;
       height: 90vh;
-      animation: shimmy 2s ease-in-out, throb 1s ease-in-out;
+      animation: shimmy 2s ease-in-out, shine 1s ease-in-out;
       animation-direction: alternate;
       animation-iteration-count: infinite;
       animation-composition: add, accumulate;
@@ -112,9 +152,6 @@
 
     #skrimp>path {
       cursor: pointer;
-      stroke: black;
-      stroke-width: .5px;
-
     }
 
     #skrimp,
@@ -184,7 +221,7 @@
       style="fill: #fe8e06" />
     <path
       d="M38.04 52.59c-1.25 1.85-4.5 2.32-6.3.9-1.75-1.38-1.9-3.75-.65-5.59s4.16-2.47 6.01-1.22c1.85 1.25 2.19 4.07.94 5.91z"
-      style="fill: #302c30 !important" />
+      style="fill: #302c30" />
   </svg>
   <div id="credits">made with ❤️ and <a href="https://github.com/jkingsman/skrimp" target="_blank">open source</a> by
     jack kingsman</a>
