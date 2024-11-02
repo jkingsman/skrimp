@@ -259,8 +259,10 @@
       path.addEventListener("click", () => {
         clickCount += 1;
         if (clickCount == 20) {
-          // evil! terrible! for each path, set a randomized timeout with an immediately invoked function! bad! use bind! too lazy to remember how bind works! evil!
-          Array.from(document.querySelectorAll('path')).forEach((path) => { (function (path) { setTimeout(function () { path.classList.add('crazy-rainbow') }, Math.random() * 500); })(path); })
+          // on the 20th click, add the crazy-rainbow to each path element randomly so we get a crazy rainbow with each path rainbowing at a different time
+          Array.from(document.querySelectorAll('path')).forEach(
+            (path) => setTimeout(() => path.classList.add('crazy-rainbow'), Math.random() * 1000)
+          )
         } else {
           // set minimum sped 0f 0.001
           animationSpeed = [Math.max(animationSpeed[0] * 0.9, 0.001), Math.max(animationSpeed[1] * 0.9, 0.001)];
