@@ -246,7 +246,7 @@
             // evil! terrible! for each path, set a randomized timeout with an immediately invoked function! bad! use bind! too lazy to remember how bind works! evil!
             Array.from(document.querySelectorAll('path')).forEach((path) => {(function(path){setTimeout(function() { path.classList.add('crazy-rainbow') }, Math.random() * 500);})(path);})
           } else {
-            animationSpeed = [animationSpeed[0] * 0.9, animationSpeed[1] * 0.9];
+            animationSpeed = [Math.max(animationSpeed[0] * 0.9, 0.001), Math.max(animationSpeed[1] * 0.9, 0.001)];
           }
 
           document.getElementById(
