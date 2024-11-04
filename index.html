@@ -37,6 +37,7 @@
       justify-content: center;
       align-items: center;
       overflow: hidden;
+      font-family: monospace;
     }
 
     a {
@@ -181,11 +182,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
     }
 
     #skrimp-button {
       font-family: monospace;
       font-size: 1.5em;
+    }
+
+    #warning {
+      font-size: 1em;
+      position: absolute;
+      bottom: 0;
     }
 
     #credits {
@@ -201,7 +209,10 @@
 </head>
 
 <body>
-  <div id="overlay"><a id="skrimp-button">click for skrimp 🔊</a></div>
+  <div id="overlay">
+    <a id="skrimp-button">click for skrimp 🔊</a>
+    <p id="warning">warning: bright and flashing lights</p>
+  </div>
   <div id="bg"></div>
   <svg id="skrimp" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 128 128">
     <path
